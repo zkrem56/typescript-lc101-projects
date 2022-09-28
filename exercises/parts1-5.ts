@@ -17,10 +17,20 @@ let daysToMars:number = hoursToMars / 24;
 
 // Code an output statement here (use a template literal):
 
-console.log(`${spacecraftName} would take ${daysToMars} to get to Mars.`);
+// console.log(`${spacecraftName} would take ${daysToMars} to get to Mars.`);
 
 // Part 3: Create a Function ("getDaysToLocation")
+function getDayesToLoaction(kilometersAway: number): number{
+    let milesAway = kilometersAway * milesPerKilometer;
+    let hoursToLocation = milesAway / speedMph;
 
+
+    return hoursToLocation / 24;
+}
+
+
+console.log(`${spacecraftName} would take ${getDayesToLoaction(kilometersToMars)} to get to Mars.`);
+console.log(`${spacecraftName} would take ${getDayesToLoaction(kilometersToTheMoon)} to get to Moon.`);
 
 
 // Move your output statement from part 2 here. Update the template literal to call

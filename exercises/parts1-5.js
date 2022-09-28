@@ -11,8 +11,15 @@ var milesToMars = kilometersToMars * milesPerKilometer;
 var hoursToMars = milesToMars / speedMph;
 var daysToMars = hoursToMars / 24;
 // Code an output statement here (use a template literal):
-console.log("".concat(spacecraftName, " would take ").concat(daysToMars, " to get to Mars."));
+// console.log(`${spacecraftName} would take ${daysToMars} to get to Mars.`);
 // Part 3: Create a Function ("getDaysToLocation")
+function getDayesToLoaction(kilometersAway) {
+    var milesAway = kilometersAway * milesPerKilometer;
+    var hoursToLocation = milesAway / speedMph;
+    return hoursToLocation / 24;
+}
+console.log("".concat(spacecraftName, " would take ").concat(getDayesToLoaction(kilometersToMars), " to get to Mars."));
+console.log("".concat(spacecraftName, " would take ").concat(getDayesToLoaction(kilometersToTheMoon), " to get to Moon."));
 // Move your output statement from part 2 here. Update the template literal to call
 // the function and print the outputs for a Mars trip and a moon trip.
 // Part 4: Create a Spacecraft Class
